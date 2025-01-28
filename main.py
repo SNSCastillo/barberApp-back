@@ -8,10 +8,28 @@ from database import  engine, localSession
 from schemas import UserData, UserId
 from models import Base
 
+# Añadimos CORS
+from fastapi.middleware.cors import CORSMiddleware
+
 
 # se crean las tablas en la DB sino està creadas
 Base.metadata.create_all(bind=engine)
+
 app = FastAPI()
+
+# añadir cors url
+origins = [
+    'http://localhost:5173'
+]
+
+# Añadir middlewar
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = origins,
+    allow_credentials = False,
+    allow_methods = ["*"],
+    allow_headers = ["*"]
+)
 
 # Trae nuestra base de datos
 def get_db():
