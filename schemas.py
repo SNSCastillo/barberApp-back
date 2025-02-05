@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-# clases que representan esquemas para usarlo con fastapi
+# clases que representan esquemas para usarlo en fastapi
 class UserData(BaseModel):
     name: str
     password: str

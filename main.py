@@ -11,7 +11,6 @@ from models import Base
 # Añadimos CORS
 from fastapi.middleware.cors import CORSMiddleware
 
-
 # se crean las tablas en la DB sino està creadas
 Base.metadata.create_all(bind=engine)
 
@@ -26,7 +25,7 @@ origins = [
 app.add_middleware(
     CORSMiddleware,
     allow_origins = origins,
-    allow_credentials = False,
+    allow_credentials = True, # Si falla la conexion del front, verificar esto
     allow_methods = ["*"],
     allow_headers = ["*"]
 )
