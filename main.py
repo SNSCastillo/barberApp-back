@@ -1,6 +1,5 @@
-# app/main.py
 from fastapi import FastAPI
-from api import user  # Importamos las rutas de usuario
+from api import user
 from model.user_model import User
 from db.db import engine
 
