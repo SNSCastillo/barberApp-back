@@ -1,4 +1,4 @@
-mi_proyecto/
+backend-estructurado/
 │
 ├── app/
 │   ├── __init__.py          # Hace que 'app' sea un paquete Python
