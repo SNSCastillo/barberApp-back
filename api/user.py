@@ -1,9 +1,8 @@
-# app/api/user.py
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
 from schema.user_schema import UserSchema, UserResponseSchema
 from crud.user_crud import UserCrud
-from db.db import get_db  # Función para obtener la sesión de la base de datos
+from db.db import get_db
 from model.user_model import User
 
 router = APIRouter()
