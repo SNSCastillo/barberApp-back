@@ -1,4 +1,3 @@
-# app/crud/user_crud.py
 from sqlalchemy.orm import Session
 from model.user_model import User
 from schema.user_schema import UserSchema

@@ -1,7 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
 
-# Esquema de datos que se van a pasar en fastapi
 class UserSchema(BaseModel):
     nb_usuario: str
     nb_completo: str
@@ -9,10 +8,10 @@ class UserSchema(BaseModel):
     fg_activo: Optional[bool] = True
 
     class Config:
-        from_attributes = True  # Cambié orm_mode por from_attributes
+        from_attributes = True
 
 class UserResponseSchema(UserSchema):
-    id_usuario: int  # Agrega id_usuario en la respuesta
+    id_usuario: int
 
     class Config:
         from_attributes = True
