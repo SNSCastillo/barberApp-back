@@ -1,4 +1,4 @@
-mi_proyecto/
+barberApp/
 │
 ├── app/
 │   ├── __init__.py          # Hace que 'app' sea un paquete Python
@@ -21,6 +21,5 @@ mi_proyecto/
 │   │   ├── user_schema.py   # Esquema Pydantic para los usuarios
 │
 ├── .env                     # Variables de entorno
-├── requirements.txt         # Dependencias del proyecto
-├── Dockerfile               # Para crear la imagen Docker
+├── requirimientos.txt         # Dependencias del proyecto
 └── docker-compose.yml       # Orquestación de contenedores (ej. PostgreSQL)

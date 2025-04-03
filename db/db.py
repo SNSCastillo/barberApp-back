@@ -9,10 +9,10 @@ load_dotenv()
 
 # Variables de conexión
 NAME_DB = os.getenv('DB_NAME')
-USER = os.getenv('USER')
+USER = os.getenv('POSTGRES_USER')
 PASSWORD = os.getenv('PASS')
 HOST = os.getenv('DB_HOST')
-PORT = os.getenv('PORT')
+PORT = os.getenv('DB_PORT')
 
 # Crear la cadena de conexión para SQLAlchemy
 DATABASE_URL = f"postgresql+psycopg2://{USER}:{PASSWORD}@{HOST}:{PORT}/{NAME_DB}"
